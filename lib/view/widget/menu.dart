@@ -1,8 +1,12 @@
+import 'dart:convert';
+
+import 'package:app_buscacidadania/model/usuarios.dart';
 import 'package:app_buscacidadania/view/cadastro.dart';
 import 'package:app_buscacidadania/view/checkin.dart';
 import 'package:app_buscacidadania/view/home.dart';
 import 'package:app_buscacidadania/view/notificacoes.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 Widget menuDrawer(BuildContext context) {
   return Drawer(
@@ -27,8 +31,8 @@ Widget menuDrawer(BuildContext context) {
                         )
                       )
                     ),
-                    Text("Rafael Ferreira Monteiro", style: TextStyle(fontSize: 18, color: Colors.white)),
-                    Text("rafael@mtxit.com.br", style: TextStyle(fontSize: 14, color: Colors.white))
+                    Text("Nome do Usuário", style: TextStyle(fontSize: 18, color: Colors.white)),
+                    Text("teste@email.com", style: TextStyle(fontSize: 14, color: Colors.white))
                   ]
                 )
               )

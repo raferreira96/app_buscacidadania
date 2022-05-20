@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class CadastroAdd extends StatefulWidget {
   const CadastroAdd({ Key? key }) : super(key: key);
@@ -8,6 +10,21 @@ class CadastroAdd extends StatefulWidget {
 }
 
 class _CadastroAddState extends State<CadastroAdd> {
+
+  TextEditingController txtNome = TextEditingController();
+  TextEditingController txtData = TextEditingController();
+  // String data = "";
+  
+
+  // void cadastrar() async {
+  //   String request = "http://mtxit.ddns.net:8080/api/v1/usuarios/login";
+  //   http.Response response = await http.post(Uri.parse(request),
+  //                                           headers: {'Content-Type': 'application/json'},
+  //                                           body: json.encode({'cid_bio': cid_bio, 'cid_nome':txtNome.text, "cid_datanasc":}));
+    
+    
+    
+  //   }
 
   String netImage = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png';
 
@@ -24,6 +41,7 @@ class _CadastroAddState extends State<CadastroAdd> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
+              controller: txtNome,
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
                 labelText: "Nome"
@@ -34,6 +52,7 @@ class _CadastroAddState extends State<CadastroAdd> {
             ),
             SizedBox(height: 15),
             TextField(
+              controller: txtData,
               keyboardType: TextInputType.datetime,
               decoration: InputDecoration(
                 labelText: "Data de Nascimento"

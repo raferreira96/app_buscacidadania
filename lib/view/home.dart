@@ -5,6 +5,7 @@ import 'package:app_buscacidadania/view/widget/menu.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
+
   const Home({ Key? key }) : super(key: key);
 
   @override

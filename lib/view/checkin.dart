@@ -17,7 +17,22 @@ class _CheckinState extends State<Checkin> {
         centerTitle: true
       ),
       drawer: menuDrawer(context),
-      body: Container(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Image(image: AssetImage('assets/img/fingerprint.png'), width:150),
+            SizedBox(
+              width: 300,
+              height: 50,
+              child: ElevatedButton(
+                child: Text('Realizar Checkin', style: TextStyle(fontSize: 18)),
+                onPressed: () {},
+              ),
+            )
+          ]
+        )
+      )
     );
   }
 }
